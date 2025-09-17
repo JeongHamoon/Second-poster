@@ -1,39 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=no">
+  <!-- 줌 제한 없이 반응형 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Poster Display</title>
   <style>
+    :root { --pad: clamp(12px, 4vw, 40px); }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      min-height: 100dvh;                 /* 현대 브라우저 안전한 높이 */
+      display: grid;
+      place-items: center;                /* 수직/수평 중앙 정렬 */
+      padding: var(--pad);
       background-color: #f3f1e7;
-      padding: 4rem;
     }
 
-    }
-
+    /* 포스터는 화면/세로에 맞춰 자연스럽게 축소 */
     img {
-      width: 100%;
-      height: auto;
       display: block;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      width: auto;
+      height: auto;
+      max-width: min(92vw, 1200px);       /* 가로 제한 */
+      max-height: calc(100dvh - 2*var(--pad)); /* 세로 패딩 고려 */
+      object-fit: contain;
       border-radius: 8px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.30);
     }
-
-
   </style>
 </head>
 <body>
 
-  <img src="Second-Poster-04 notext.webp" alt="Second Poster"/>
-
+  <!-- 파일명은 공백 제거: Second-Poster-04-notext.webp 로 저장 권장 -->
+  <img src="Second-Poster-04-notext.webp" alt="Second Poster">
 
 </body>
-
 </html>
