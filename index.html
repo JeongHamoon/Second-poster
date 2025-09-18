@@ -6,7 +6,8 @@
   <title>Second Poster</title>
   <style>
     html, body { margin:0; height:100%; background:transparent; }
-    body { overflow:hidden; }
+   overflow-y:auto;                     /* ← 세로 스크롤 허용 */
+  -webkit-overflow-scrolling: touch;   /* iOS 부드러운 스크롤 */
 
     /* 포스터를 iframe의 가로 폭에 완전히 붙게 */
     img{
@@ -24,4 +25,5 @@
   <img src="./second-poster-04-notext.webp" alt="Second Poster" />
 </body>
 </html>
+
 
