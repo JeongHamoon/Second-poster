@@ -22,12 +22,14 @@
   img{
     display: block;
     /* 화면 꽉 차되 비율 유지 (상단에 붙음) */
+    height: auto;
     max-height: 100svh;
-    width: auto;
-    max-width: min(100%, 100vw);
+    width: 100svw;
+    max-width: none;
     object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0,0,0,.3);
+    border:0;
+    border-radius: 0px;
+    box-shadow: none;
   }
 </style>
 
@@ -36,4 +38,5 @@
   <img src="./second-poster-04-notext.webp" alt="Second Poster">
 </body>
 </html>
+
 
