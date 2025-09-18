@@ -1,42 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Second Poster</title>
-  <style>
-  :root { --pad: 0; }           /* 바깥 패딩 제거 */
-
-  * { box-sizing: border-box; }
-  html, body { height: 100%; }
-
-  body{
-    margin: 0;
-    min-height: 100svh;        /* 모바일 주소창 변화 대응 */
-    display: grid;
-    place-items: start center;  /* ⬅️ 세로는 '위', 가로만 가운데 */
-    padding: 0;                 /* 혹시 모를 패딩 확실히 제거 */
-    background: #f3f1e7;
-  }
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Second Poster — edge</title>
+<style>
+  html, body { margin:0; padding:0; height:100%; background:transparent; }
+  body { overflow:hidden; }
   img{
-    display: block;
-    /* 화면 꽉 차되 비율 유지 (상단에 붙음) */
-    height: auto;
-    max-height: 100svh;
-    width: 100svw;
-    max-width: none;
-    object-fit: contain;
+    display:block;
+    width:100svw;    /* 모바일 safe-area 고려 */
+    max-width:none;
+    height:auto;
     border:0;
-    border-radius: 0px;
-    box-shadow: none;
+    border-radius:0;
+    box-shadow:none;
   }
 </style>
-
 </head>
 <body>
-  <img src="./second-poster-04-notext.webp" alt="Second Poster">
+  <img src="./second-poster-04-notext.webp" alt="Second Poster" />
 </body>
 </html>
-
-
