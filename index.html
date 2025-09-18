@@ -1,24 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Second Poster — edge</title>
-<style>
-  html, body { margin:0; padding:0; height:100%; background:transparent; }
-  body { overflow:hidden; }
-  img{
-    display:block;
-    width:100svw;    /* 모바일 safe-area 고려 */
-    max-width:none;
-    height:auto;
-    border:0;
-    border-radius:0;
-    box-shadow:none;
-  }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Second Poster</title>
+  <style>
+    html, body { margin:0; height:100%; background:transparent; }
+    body { overflow:hidden; }
+
+    /* 포스터를 iframe의 가로 폭에 완전히 붙게 */
+    img{
+      display:block;
+      width:100vw;         /* viewport(=iframe) 가로를 꽉 채움 */
+      max-width:none;      /* 1200px 같은 상한 없애기 */
+      height:auto;
+      margin:0;
+      border:0; border-radius:0; box-shadow:none;
+      object-fit:contain;
+    }
+  </style>
 </head>
 <body>
   <img src="./second-poster-04-notext.webp" alt="Second Poster" />
 </body>
 </html>
+
